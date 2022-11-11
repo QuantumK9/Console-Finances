@@ -126,6 +126,20 @@ const calcGreatestProfit = () => {
 };
 var greatest = calcGreatestProfit();
 
+// greatest decrease in losses
+const calcGreatestLosses = () => {
+  var greatestLosses = 0;
+  var greatestMonth = "";
+  finances.map((month) => {
+    if (month[1] < greatestLosses) {
+      greatestLosses = month[1];
+      greatestMonth = month[0];
+    }
+  });
+  return [greatestMonth, greatestLosses];
+};
+var worst = calcGreatestLosses();
+
 // display results in the console
 function displayCalculations() {
   console.log(`Financial Analysis
@@ -133,8 +147,8 @@ function displayCalculations() {
 Total Months: ${totalMonths}
 Total: ${totalProfit}
 Average  Change: ${averageChanges}
-Greatest Increase in Profits: ${greatest}
-Greatest Decrease in Profits: Sep-2013 ($-2196167)`);
+Greatest Increase in Profits: ${greatest[0]} ($${greatest[1]})
+Greatest Decrease in Profits: ${worst[0]} ($${worst[1]})`);
 }
 
 displayCalculations();
