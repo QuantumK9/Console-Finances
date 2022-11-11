@@ -86,9 +86,9 @@ var finances = [
   ["Jan-2017", 138230],
   ["Feb-2017", 671099],
 ];
-
+// calculate total months
 const totalMonths = finances.length;
-
+// calculate total profit/losses
 const calcTotalProfit = () => {
   var total = 0;
   finances.map((month) => {
@@ -98,14 +98,29 @@ const calcTotalProfit = () => {
 };
 var totalProfit = calcTotalProfit();
 
+// calculate average changes in Profit/losses
+const calcAverageChanges = () => {
+  var average = 0;
+  var total = 0;
+  for (var i = 1; i < finances.length; i++) {
+    total += finances[i][1] - finances[i - 1][1];
+  }
+  average = total / totalMonths;
+  averageRounded = average.toFixed(2);
+  // although .toFixed() can have issues
+  return averageRounded;
+};
+var averageChanges = calcAverageChanges();
+// display results in the console
 function displayCalculations() {
   console.log(`Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
 Total: ${totalProfit}
-Average  Change: $-2315.12
+Average  Change: ${averageChanges}
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)`);
 }
 
 displayCalculations();
+// console.log(984655 - 867884);
