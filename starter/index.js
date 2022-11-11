@@ -111,6 +111,21 @@ const calcAverageChanges = () => {
   return averageRounded;
 };
 var averageChanges = calcAverageChanges();
+
+// greatest increase in profit
+const calcGreatestProfit = () => {
+  var greatestProfit = 0;
+  var greatestMonth = "";
+  finances.map((month) => {
+    if (month[1] > greatestProfit) {
+      greatestProfit = month[1];
+      greatestMonth = month[0];
+    }
+  });
+  return [greatestMonth, greatestProfit];
+};
+var greatest = calcGreatestProfit();
+
 // display results in the console
 function displayCalculations() {
   console.log(`Financial Analysis
@@ -118,9 +133,8 @@ function displayCalculations() {
 Total Months: ${totalMonths}
 Total: ${totalProfit}
 Average  Change: ${averageChanges}
-Greatest Increase in Profits: Feb-2012 ($1926159)
+Greatest Increase in Profits: ${greatest}
 Greatest Decrease in Profits: Sep-2013 ($-2196167)`);
 }
 
 displayCalculations();
-// console.log(984655 - 867884);
