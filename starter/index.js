@@ -89,14 +89,24 @@ var finances = [
 
 const totalMonths = finances.length;
 
+const calcTotalProfit = () => {
+  var total = 0;
+  finances.map((month) => {
+    total += month[1];
+  });
+  return total;
+};
+var totalProfit = calcTotalProfit();
+
 function calculations() {
   console.log(`Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
-Total: $2561231
+Total: ${totalProfit}
 Average  Change: $-2315.12
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)`);
 }
 
 calculations();
+// totalProfit();
