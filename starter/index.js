@@ -145,8 +145,8 @@ function displayCalculations() {
   console.log(`Financial Analysis
 ----------------------------
 Total Months: ${totalMonths}
-Total: ${totalProfit}
-Average  Change: ${averageChanges}
+Total: $${totalProfit}
+Average  Change: $${averageChanges}
 Greatest Increase in Profits: ${greatest[0]} ($${greatest[1]})
 Greatest Decrease in Profits: ${worst[0]} ($${worst[1]})`);
 }
