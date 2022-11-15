@@ -22,7 +22,7 @@ The final project can me seen in the following link:
 
 
 ## Screenshots
-![Screenshot](/starter/images/screenshot.jpg)
+![Screenshot](/images/screenshot.jpg)
 
 
 ## Credits
