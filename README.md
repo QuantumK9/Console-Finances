@@ -16,7 +16,7 @@ If someone wants to, they can download the code from the following repository:
 
 The final project can me seen in the following link:
 
-[Iraklis K - Web Developer Portfolio](https://quantumk9.github.io/Console-Finances/)
+[Iraklis K - Console-Finances](https://quantumk9.github.io/Console-Finances/)
 
 
 
